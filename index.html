@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Inputs_Submit_Reset_Button 01-09-22</title>
+</head>
+<body>
+    <form name="cadastro" action="#" method="get"> <!--O metodo get permite a visualização das informações pela URL e é mas rápido que o metodo post-->
+        <label>Nome:</label>                       <!--Já o metodo post não permite a visualização pela URL sendo mais seguro-->
+                                                   <!--O metodo get irá expor a senha e poderá ser copiado e enviado para terceiros-->
+             <input class="display_block" type="text" name="nome" maxlength="20" size="18" >
+            <label>Senha:</label>                  <!--maxlength determina o maximo de caracteres que caberão no compo-->
+            <input class="display_block"type="password" name="senha" maxlength="20" size="18" >
+        <div>                <!--Já size determina o espaço do campo-->
+            <label class="display_block">Esporte Favorito:</label>
+            <input class="margin_bottom_0" type="checkbox" name="futbol">Futbol
+            <input class="margin_bottom_0" type="checkbox" name="basquete">Basquete
+            <input class="margin_bottom_0" type="checkbox" name="natação">Natação
+        </div>
+        <div>
+            <label class="display_block">Possue carro?</label>
+            <input type="radio" name="carro" value="s" checked>Sim <!--checked faz com que a opção já comece marcada-->
+            <input type="radio" name="carro" value="n">Não
+        </div>
+        <div>
+            <label class=" display_block">Que horas são?</label>
+            <input type="time" name="hora"><!--É possivel usar os comandos min e max para determinar um limite minimo e mâximo respectivamente-->
+            <label class=" display_block">Escolha um dia</label>
+            <input type="date" name="data" min="2022-08-25" max="2022-09-10">
+            <label class=" display_block">Dia e hora</label>
+            <input type="datetime-local" name="dia_e_hora">
+        </div>
+        <div>
+            <label class=" display_block">Semana</label>
+            <input type="week" name="semana">
+            <label class=" display_block">Mês</label>
+            <input type="month" name="mês">
+            <input type="hidden" name="escondido" value="exemplo"><!--Passa valores sem que o usuario veja-->
+        </div>
+        <div>
+            <input type="image" src="image.png" name="imagem">
+        </div>
+        <div class="display_block">                          
+            <input type="submit" name="btn_eviar" value="Eviar"required>
+            <input type="reset" name="btn_limpar" value="Limpar"required>
+            <input type="button" name="btn_nada" value="Nada"required>
+        </div>
+    </form>
+</body>
+</html>
